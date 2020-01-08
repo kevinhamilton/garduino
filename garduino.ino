@@ -9,11 +9,12 @@ int soilMoistureThreshold = 500; // 380 when dunked in water, 540 sitting in dry
 int motorPin = 7;
 int motorCycleMilliseconds = 1000; // turn on for 1 second.
 
+int loopSpeed = 1000;
+
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
 
-  // sets the motor pin as output
+  // sets the motor's serial pin as output
   pinMode(motorPin, OUTPUT);
 }
 
@@ -27,19 +28,20 @@ void loop() {
   if (soilMoisture > soilMoistureThreshold)
   {
     Serial.println("Turn on Motor");
+    //TODO
     //TurnOnWaterPump(motorCycleMilliseconds);
   }
 
-  // Check water resveour:
+  // Check water resveour
   waterLevel = analogRead(waterLevelSensorPin);
 
   //If water level is really low, send alert.
   if (waterLevel < waterLevelThreshold)
   {
-    Serial.println("Water resevour is empty. Send alert.");
+    Serial.println("Water resevour is empty. Send alert. TODO");
   }
 
-  delay(1000);
+  delay(loopSpeed);
 }
 
 // Turn on water pump for X amount of time.
