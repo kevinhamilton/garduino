@@ -4,7 +4,7 @@ int waterLevelSensorPin = A0;
 
 int soilMoisture = 0;
 int soilSensorPin = A1;
-int soilMoistureThreshold = 500; // 380 when dunked in water, 540 sitting in dry area. Yes.
+int soilMoistureThreshold = 500; // 380 when dunked in water, 540 sitting in dry area. Yes. TODO: More friendly #s.
 
 int motorPin = 7;
 int motorCycleMilliseconds = 1000; // turn on for 1 second.
@@ -38,7 +38,8 @@ void loop() {
   //If water level is really low, send alert.
   if (waterLevel < waterLevelThreshold)
   {
-    Serial.println("Water resevour is empty. Send alert. TODO");
+    //TODO. Maybe handle notifications with the API?
+    Serial.println("Water resevour is empty. Send alert.");
   }
 
   delay(loopSpeed);
