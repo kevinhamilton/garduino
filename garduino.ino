@@ -46,8 +46,8 @@ void loop() {
 
 // Turn on water pump for X amount of time.
 void TurnOnWaterPump(int milliseconds) {
-  digitalWrite(motorPin, HIGH); // sets the digital pin 13 on
-  delay(milliseconds);          // waits for a spec
-  digitalWrite(motorPin, LOW);  // sets the digital pin 13 off
+  digitalWrite(motorPin, HIGH);
+  delay(milliseconds);
+  digitalWrite(motorPin, LOW);  
 }
 

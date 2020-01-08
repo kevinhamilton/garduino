@@ -1,8 +1,6 @@
 ## What is this?
-This is a small project I was working on using Arduino to automatically detect when my plants are dry and automatically water them to an appropriate level. There's also a water resevour that will be monitored and some form of alert when it gets low.
+This is a small project I was working on using Arduino to automatically detect when my a plants soil is dry and automatically water it. Theres a soil moisture sensor, water level sensor and a tiny pump involved. 
 
+When the water resevour is low I eventually want some form of alert.
 
- Eventually i'll add a backend API to log these stats because I want some cool graphs about my Cilantro.
-
-## Future
- I figured I would try this out with a pot of Cilantro and see how it goes, then expand the idea from there.
+Eventually i'll add a backend API to log these stats because I want some cool graphs about my Cilantro.
